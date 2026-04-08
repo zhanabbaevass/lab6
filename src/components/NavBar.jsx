@@ -29,17 +29,18 @@ const { recipes, darkMode, toggleDarkMode } = useRecipes();
       <span style={{ color: "#e67e22", fontWeight: "bold", fontSize: "20px", marginRight: "40px" }}>
         🍽️ RecipeBook
       </span>
-      <NavLink to="/" style={linkStyle}>🏠 Главная</NavLink>
+      <NavLink to="/" style={linkStyle}>Главная</NavLink>
+      <NavLink to="/browse" style={linkStyle}>🌍 Browse</NavLink>
       <NavLink to="/recipes" style={linkStyle}>📖 Рецепты</NavLink>
       <NavLink to="/favorites" style={linkStyle}>
-        ❤️ Избранное {favCount > 0 && (
+        Избранное {favCount > 0 && (
           <span style={{ background: "#e74c3c", color: "#fff", borderRadius: "50%", padding: "1px 6px", fontSize: "12px" }}>
             {favCount}
           </span>
         )}
       </NavLink>
-      <NavLink to="/profile" style={linkStyle}>👤 Профиль</NavLink>
-
+      
+      <NavLink to="/profile" style={linkStyle}>Профиль</NavLink>
       <div
   onClick={toggleDarkMode}
   style={{
